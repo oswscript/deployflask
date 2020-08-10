@@ -1,0 +1,109 @@
+{% from '_macros/_macro_flash_alerts.html.j2' import flash_alerts %}
+{% from '_macros/_macro_navbar.html.j2' import macro_nav %}
+{% from '_macros/_macro_dropdown_menu.html.j2' import macro_dropdown_menu %}
+{% from '_macros/_macro_sidebar.html.j2' import macro_sidebar %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Meta Tags-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <meta autor="@oswscript">
+
+    <!--Title-->
+    <title>{% block title %} {% endblock %}</title>
+
+    <!--STYLES-->
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/simple-sidebar.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/custom_style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    
+    <!--Data tables-->
+    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>  
+        
+    <div class="d-flex" id="wrapper">
+
+        {% if request.path != '/' and request.path != '/signup' %}
+            <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading"><b>Menu</b> </div>
+                <div class="list-group list-group-flush">
+                    {{ macro_sidebar('dash', 'Dashboard') }}
+                    {{ macro_sidebar('index_users', 'Users') }}
+                    {{ macro_sidebar('logout', 'Logout') }}
+                </div>
+                <div class="col-sm-12">
+                    {{ flash_alerts() }}
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+        {% endif %}
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            {% if request.path != '/' and request.path != '/signup' %}
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Profile
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                {{ macro_dropdown_menu('login', 'Profile') }}
+                                {{ macro_dropdown_menu('logout', 'Logout') }}
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+            {% endif %}
+
+            <div class="container-fluid p-3">
+                {% block content %}{% endblock %}
+            </div>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Javascripts -->
+    <script src="{{ url_for('static', filename='jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#datatable').DataTable({
+                
+            });
+        } );
+    </script>
+    
+</body>
+</html>
