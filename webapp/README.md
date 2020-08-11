@@ -1,6 +1,6 @@
 # Simple Flask MVC Structure Python3
 
-## DEPLOY
+## /----------------- DEPLOY -----------------/
 
 #### 1 - Create in ``` /var/www/ ``` the directory of our project; we will call it "webapp.com"
 ``` bash 
