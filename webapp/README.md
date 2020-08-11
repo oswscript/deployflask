@@ -78,7 +78,7 @@ sudo virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
 │     │     |                    └─ README.md
 │     │     |                    └─ __init__.py
 │     │     |                    └─ app.wsgi
-│     │     |                    └─ server.py
+
 ```
 
 #### 10 - In the directory of our project and with virtualenv activated, we install the requirements of our project
