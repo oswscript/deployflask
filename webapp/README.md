@@ -7,7 +7,7 @@ python3 -m pip install --user virtualenv
 virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
 
 ## Activate and Deactivate virtualenv to check installation
- Activate: source env/bin/activate
- Deactivate: deactivate
+ - Activate: source env/bin/activate
+ - Deactivate: deactivate
 
 ##
