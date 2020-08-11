@@ -92,7 +92,7 @@ sudo pip freeze > requirements.txt && sudo pip install requirements.txt
 sudo nano /var/www/webapp.com/webapp/app.wsgi
 ```
 ... and copy...
-```
+```python
   #!/usr/bin/python3
   import sys
   import logging
@@ -114,3 +114,7 @@ sudo nano /var/www/webapp.com/webapp/app.wsgi
   #key to forms
   application.secret_key = "any-key"
   ```
+#### 12 - Restart apache2
+``` bash
+sudo service apache2 restart
+```
