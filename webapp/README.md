@@ -63,11 +63,20 @@ sudo virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
 
 ```
 ├─ var/         
-│  ├─ www/            
-│  │  ├─ webapp.com/
-│  │  |  ├─ webapp/
-│  │  |  |       └─ 
-
+│     ├─ www/            
+│     │     ├─ webapp.com/
+│     │     |            ├─ webapp/
+│     │     |                    ├─ config/ 
+│     │     |                    ├─ controllers/
+│     │     |                    ├─ forms/
+│     │     |                    ├─ helpers/
+│     │     |                    ├─ models/
+│     │     |                    ├─ static/
+│     │     |                    ├─ templates/
+│     │     |                    └─ README.md
+│     │     |                    └─ __init__.py
+│     │     |                    └─ app.wsgi
+│     │     |                    └─ server.py
 ```
 
 ## 4 Go to the project directory and install requirements
