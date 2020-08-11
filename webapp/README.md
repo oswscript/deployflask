@@ -13,7 +13,7 @@
 - pip freeze > requirements.txt
 - pip install -r requirements.txt
 
-## 5 Configure .wsgi file
+## 5 Configure .wsgi file in the project
 ```python
   #!/usr/bin/python3
   import sys
