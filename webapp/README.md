@@ -184,5 +184,5 @@ sudo service apache2 restart
 │     │     |                    └─ README.md
 │     │     |                    └─ __init__.py
 │     │     |                    └─ app.wsgi
-│     │     |                    └─ server.py
+
 ```

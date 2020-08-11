@@ -1,3 +1,16 @@
+"""
+;==========================================
+; Title:  WEBAPP
+; Author: @oswscript
+; Date:   21 July 2020
+; Version: 0
+;==========================================
+
+"""
+__author__ = "oswscript"
+__version__ = "0"
+__email__ = "oswscript@gmail.com"
+
 from flask import Flask
 from flask_wtf import CSRFProtect
 from webapp.config.Config import Dev, Prod
