@@ -57,7 +57,7 @@ sudo virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
  source /usr/local/virtualenv/bin/activate
 ```
 
-#### 8 - Clone this project and locate the ``` webapp ``` file, inside your project in ```/var/www/webapp.com/ ```
+#### 8 - Clone this project and locate the ``` webapp ``` file into ```/var/www/webapp.com/ ```
 
 #### 9 - Final and correct structure of the project
 
@@ -79,9 +79,10 @@ sudo virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
 │     │     |                    └─ server.py
 ```
 
-## 4 Go to the project directory and install requirements
-- pip freeze > requirements.txt
-- pip install -r requirements.txt
+#### 10 - In the directory of our project and with virtualenv activated, we install the requirements of our project
+``` bash
+sudo pip freeze > /var/www/webapp.com/webapp/requirements.txt && sudo pip install /var/www/webapp.com/webapp/requirements.txt
+```
 
 ## 5 Configure .wsgi file in the project
 ```python
