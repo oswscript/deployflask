@@ -116,10 +116,6 @@ sudo nano /var/www/webapp.com/webapp/app.wsgi
   #key to forms
   application.secret_key = "any-key"
   ```
-#### 12 - Restart apache2
-``` bash
-sudo service apache2 restart
-```
 
 #### 13 - If you are working on localhost, you will need to add the domain to the ```/etc/hosts``` file (optional)
 ``` bash
@@ -131,7 +127,7 @@ sudo nano /etc/hosts
 127.0.1.1 oswscript-PC
 127.0.0.2 webapp.com
 ```
-#### 14 - Restart apache2
+#### 13 - Restart apache2
 ``` bash
 sudo service apache2 restart
 ```
