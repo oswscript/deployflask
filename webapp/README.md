@@ -1,7 +1,7 @@
 # Flask System MVC in Python3 with deploy in WSGI
 
 ## 1 Install Virtualenv
-- sudo apt-get install python-virtualenv
+- sudo apt-get install python3-virtualenv
   
 ## 2 Create Virtualenv in /usr/local/ with python 3.7
 - virtualenv --python=/usr/bin/python3.7 /usr/local/virtualenv/
