@@ -1,4 +1,6 @@
-# Flask System MVC in Python3 with deploy in WSGI
+# Simple Flask MVC Structure Python3
+
+## /----------------- DEPLOY -----------------/
 
 #### 1 - Create in ``` /var/www/ ``` the directory of our project; we will call it "webapp.com"
 ``` bash 
@@ -134,5 +136,57 @@ sudo nano /etc/hosts
 sudo service apache2 restart
 ```
 
-## Special note
+#### Special note
 - If an error occurs, because your linux operating system does not meet all the requirements to make flask work, or some other internal problem, you can see the apache errors in: ``` /var/www/webapp.com/webapp/error.log ```. This debug option is configured in step 3. Open the file and you can check and resolve any errors that occur.
+
+## /----------------- STRUCTURE -----------------/
+
+
+```
+├─ var/         
+│     ├─ www/            
+│     │     ├─ webapp.com/
+│     │     |            ├─ webapp/
+│     │     |                    ├─ config/
+│     │     |                    |        └─ Config.py
+│     │     |                    |        └─ Database.py
+│     │     |                    |        └─ __init__.py
+│     │     |                    ├─ controllers/
+│     │     |                    |        └─ AuthController.py
+│     │     |                    |        └─ DashController.py
+│     │     |                    |        └─ UserController.py
+│     │     |                    |        └─ __init__.py
+│     │     |                    ├─ forms/
+│     │     |                    |        └─ LoginForm.py
+│     │     |                    |        └─ SignupForm.py
+│     │     |                    |        └─ UpdatePassForm.py
+│     │     |                    |        └─ UpdateUserForm.py
+│     │     |                    |        └─ __init__.py
+│     │     |                    ├─ helpers/
+│     │     |                    |        └─ custom_validations.py
+│     │     |                    |        └─ general_functions.py
+│     │     |                    ├─ models/
+│     │     |                    |        └─ UserModel.py
+│     │     |                    ├─ static/ #CSS, BOOSTRAP, JS, IMAGES, ETC...
+│     │     |                    ├─ templates/
+│     │     |                    |           ├─ _macros/
+│     │     |                    |           |         └─ _macro_dropdown_menu.html.j2
+│     │     |                    |           |         └─ _macro_flash_alerts.html.j2
+│     │     |                    |           |         └─ _macro_input_form.html.j2
+│     │     |                    |           |         └─ _macro_navbar.html.j2
+│     │     |                    |           |         └─ _macro_sidebar.html.j2
+│     │     |                    |           ├─ auth/
+│     │     |                    |           |         └─ login.html.j2
+│     │     |                    |           |         └─ signup.html.j2
+│     │     |                    |           ├─ users/
+│     │     |                    |           |         └─ create.html.j2
+│     │     |                    |           |         └─ index.html.j2
+│     │     |                    |           |         └─ update.html.j2
+│     │     |                    |           |         └─ update_pass.html.j2
+│     │     |                    |           └─ base.html.j2
+│     │     |                    |           └─ dash.html.j2
+│     │     |                    └─ README.md
+│     │     |                    └─ __init__.py
+│     │     |                    └─ app.wsgi
+│     │     |                    └─ server.py
+```
