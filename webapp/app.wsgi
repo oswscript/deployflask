@@ -4,7 +4,7 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 
 #locate this directory at the root of the file that contains the __init__ with the instance "app"
-sys.path.insert(0,"/var/www/webapp/")
+sys.path.insert(0,"/var/www/oswflask.com/")
 
 #locate in this directory the file "activate_this.py". It is located in the "virtualenv" folder created in step 2
 activate_this = '/usr/local/virtualenv/bin/activate_this.py'
