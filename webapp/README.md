@@ -1,4 +1,6 @@
-# Flask System MVC in Python3 with deploy in WSGI
+# Simple Flask MVC Structure Python3
+
+## DEPLOY
 
 #### 1 - Create in ``` /var/www/ ``` the directory of our project; we will call it "webapp.com"
 ``` bash 
