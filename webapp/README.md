@@ -118,3 +118,21 @@ sudo nano /var/www/webapp.com/webapp/app.wsgi
 ``` bash
 sudo service apache2 restart
 ```
+
+#### 13 - If you are working on localhost, you will need to add the domain to the ```/etc/hosts``` file (optional)
+``` bash
+sudo nano /etc/hosts
+```
+... it should look like this...
+```python
+127.0.0.1 localhost
+127.0.1.1 oswscript-PC
+127.0.0.2 webapp.com
+```
+#### 14 - Restart apache2
+``` bash
+sudo service apache2 restart
+```
+
+## Special note
+- If an error occurs, because your linux operating system does not meet all the requirements to make flask work, or some other internal problem, you can see the apache errors in: ``` /var/www/webapp.com/webapp/error.log ```. This debug option is configured in step 3. Open the file and you can check and resolve any errors that occur.
