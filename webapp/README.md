@@ -117,7 +117,7 @@ sudo nano /var/www/webapp.com/webapp/app.wsgi
   application.secret_key = "any-key"
   ```
 
-#### 13 - If you are working on localhost, you will need to add the domain to the ```/etc/hosts``` file (optional)
+#### 12 - If you are working on localhost, you will need to add the domain to the ```/etc/hosts``` file (optional)
 ``` bash
 sudo nano /etc/hosts
 ```
