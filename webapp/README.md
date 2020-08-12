@@ -132,6 +132,8 @@ sudo nano /etc/hosts
 sudo service apache2 restart
 ```
 
+
+
 #### Special note
 - If an error occurs, because your linux operating system does not meet all the requirements to make flask work, or some other internal problem, you can see the apache errors in: ``` /var/www/webapp.com/webapp/error.log ```. This debug option is configured in step 3. Open the file and you can check and resolve any errors that occur.
 
